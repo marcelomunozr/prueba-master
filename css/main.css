@@ -51,19 +51,237 @@ textarea {
 
 
 /* ==========================================================================
-   Author's custom styles
+   Marcelo 2Brains custom styles
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
 
+.navbar-default.custom-navbar{
+    background-color: #002157;
+    border: 0;
+    border-radius: 0;
+}
 
+.custom-navbar .navbar-header{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
 
+.logo-bch{
+    background: url('../img/logo-sprite.png') no-repeat  left top;
+    display: block;
+    width: 200px;
+    height: 38px;
+    padding: 0;
+    margin: 0;
+}
 
+.navbar-default.custom-navbar .custom-menu{
+    border: none;
+}
 
+.navbar-default.custom-navbar .custom-menu .navbar-nav{
+    padding: 15px 0;
+    margin-right: 0;
+}
 
+.navbar-default.custom-navbar .navbar-nav li a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    color: white;
+    padding: 0 8px;
+    border-right: 1px solid white;
+}
 
+.navbar-default.custom-navbar .navbar-nav li:last-child a{
+    border-right: 0;
+}
 
+.custom-bch-container-top{
+    margin-bottom: 35px;
+}
 
+.custom-bch-container-top h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 28px;
+    color: #002157;
+    font-weight: 400;
+}
 
+.custom-bch-info{
+    background: #f6f6f8;
+    border: 1px solid #d2d2d4;
+}
 
+.custom-bch-info .head-info{
+    padding: 0 15px;
+    border-bottom: 1px solid #d2d2d4;
+    display: flex;
+    height: 54px;
+    align-items: center;
+}
+
+.custom-bch-info h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #666668;
+    margin: 0;
+    font-weight: 400;
+}
+
+.custom-bch-info .body-info{
+    padding: 15px;
+}
+
+.custom-bch-info h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #666668;
+    font-weight: 400;
+    margin: 15px 0 5px 0;
+}
+
+.custom-bch-info .custom-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-bch-info .custom-list li{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #666668;
+    display: flex;
+}
+
+.custom-bch-info .custom-list.linear-list li{
+    margin-bottom: 5px;
+}
+
+.custom-bch-info .custom-list.linear-list li:before{
+    content: '-';
+    margin-right: 4px;
+}
+
+.custom-bch-info .body-info .information-cost{
+    border: 1px solid #d2d2d4;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 32px 15px;
+    background-color: white;
+}
+
+.custom-bch-info .custom-list.circle-list li{
+    margin-bottom: 15px;
+}
+
+.custom-bch-info .custom-list.circle-list li:before{
+    content: '';
+    width: 8px;
+    min-width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+    background: #d2d2d2;
+    position: relative;
+    top: 6px;
+}
+
+.custom-bch-info .custom-list.circle-list li:last-child{
+    margin-bottom: 0;
+}
+
+.custom-bch-info .information-cost li .text{
+    max-width: 70%;
+}
+
+.custom-bch-info .information-cost li .cost{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.custom-collapse-head{
+    background: #f6f6f8;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-collapse-head span.title-description{
+    flex-grow: 1;
+}
+
+.first-row .input-group{
+    margin-bottom: 15px;
+}
+
+.custom-collapse-body{
+    background: #f1f1f3;
+    padding: 15px;
+}
+
+.custom-collapse-body .flex-buttom{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.table-bch-container{
+    margin-top: 15px;
+}
+
+.table-bch-container .table thead{
+    background: #f6f6f6;
+}
+
+.paginator-bch{
+    display: flex;
+    justify-content: center;
+}
+
+.paginator-bch .pagination>li>a, .paginator-bch .pagination>li>span{
+    color: #3e89cc;
+    font-size: 14px;
+}
+
+.paginator-bch .pagination>li.active>a, .paginator-bch .pagination>li.active>span{
+    background: #3e89cc;
+    color: white;
+}
+
+@media (max-width: 992px){
+    .custom-navbar .navbar-header .navbar-toggle{
+        order: 2;
+        border: none;
+    }
+    .custom-navbar .navbar-header .navbar-toggle span{
+        background: white;
+    }
+    .navbar-default.custom-navbar .navbar-nav li a{
+        padding: 10px 15px;
+        border: 0;
+    }
+    .logo-bch{
+        flex-grow: 1;
+        margin-left: 0;
+    }
+    .custom-bch-info .information-cost li .text{
+        max-width: 100%;
+    }
+    .custom-bch-info .information-cost li .cost{
+        display: none;
+    }
+    .custom-collapse-body select.form-control{
+        margin-bottom: 15px;
+    }
+    .custom-collapse-body .flex-buttom{
+        margin-top: 15px;
+        padding-right: 0;
+    }
+}
 
 
 
