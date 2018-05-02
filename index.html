@@ -110,7 +110,7 @@
 						</div>
 						<div class="col-md-6 col-sm-12">
 							<div class="flex-buttom">
-								<button type="button" class="btn btn-success" ng-click="filtroBusqueda = busqueda">Buscar</button>
+								<button type="button" ng-disabled="(!busqueda)" class="btn btn-success" ng-click="filtroBusqueda = busqueda; resetList()">Buscar</button>
 							</div>
 						</div>
 					</div>
@@ -131,7 +131,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="info in rowInfo.slice(((currentPage-1)*infoPerPage), ((currentPage)*infoPerPage)) | filter: filtroBusqueda | limitTo:infoPerPage">
+					<tr ng-repeat="info in (rowInfo | filter: filtroBusqueda).slice(((currentPage-1)*infoPerPage), ((currentPage)*infoPerPage)) | limitTo:infoPerPage">
 						<td class="text-center">
 							<input type="checkbox" name="optionRadio">
 						</td>

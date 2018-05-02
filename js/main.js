@@ -5,6 +5,7 @@ appBch.run(function() {
 });
 */
 
+
 appBch.controller("mainController", function($rootScope) {
     //data dummy
     $rootScope.rowInfo=[
@@ -114,7 +115,7 @@ appBch.controller("mainController", function($rootScope) {
             "amet":"$1.200.000"
         },
         {
-            "lorem":"buscar",
+            "lorem":"buscar1",
             "ipsum":"zzzzzzzzzzzzz",
             "dolor":"zzzzzzzzzzzzz",
             "sit":"zzzzzzzzzzzzz",
@@ -170,7 +171,7 @@ appBch.controller("mainController", function($rootScope) {
             "amet":"$200.000"
         },
         {
-            "lorem":"xxxxxxxxxxxxx",
+            "lorem":"buscar2",
             "ipsum":"xxxxxxxxxxxxx",
             "dolor":"xxxxxxxxxxxxx",
             "sit":"xxxxxxxxxxxxx",
@@ -233,7 +234,7 @@ appBch.controller("mainController", function($rootScope) {
             "amet":"$9.000.000"
         },
         {
-            "lorem":"zzzzzzzzzzzzz",
+            "lorem":"buscar3",
             "ipsum":"zzzzzzzzzzzzz",
             "dolor":"zzzzzzzzzzzzz",
             "sit":"zzzzzzzzzzzzz",
@@ -514,17 +515,13 @@ appBch.controller("mainController", function($rootScope) {
         }
     ];
 
-    //paginator
     $rootScope.totalItems = $rootScope.rowInfo.length;
     $rootScope.currentPage = 1;
     $rootScope.infoPerPage = 10;
 
-    $rootScope.setPage = function (pageNo) {
-        $rootScope.currentPage = pageNo;
+    $rootScope.resetList = function(){
+        $rootScope.infoPerPage = $rootScope.rowInfo.length;
     };
-
-    //filter
-
 
 
 });

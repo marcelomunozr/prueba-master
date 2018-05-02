@@ -194,7 +194,7 @@ textarea {
 }
 
 .custom-bch-info .information-cost li .text{
-    max-width: 70%;
+    max-width: 60%;
 }
 
 .custom-bch-info .information-cost li .cost{
@@ -257,30 +257,38 @@ textarea {
         order: 2;
         border: none;
     }
+
     .custom-navbar .navbar-header .navbar-toggle span{
         background: white;
     }
+
     .navbar-default.custom-navbar .navbar-nav li a{
         padding: 10px 15px;
         border: 0;
     }
+
     .logo-bch{
         flex-grow: 1;
         margin-left: 0;
     }
+
     .custom-bch-info .information-cost li .text{
         max-width: 100%;
     }
+
     .custom-bch-info .information-cost li .cost{
         display: none;
     }
+
     .custom-collapse-body select.form-control{
         margin-bottom: 15px;
     }
+
     .custom-collapse-body .flex-buttom{
         margin-top: 15px;
         padding-right: 0;
     }
+
 }
 
 
