@@ -6,7 +6,7 @@ appBch.run(function() {
 */
 
 
-appBch.controller("mainController", function($rootScope) {
+appBch.controller("mainController", ['$rootScope', '$filter', function($rootScope, $filter) {
     //data dummy
     $rootScope.rowInfo=[
         {
@@ -521,7 +521,22 @@ appBch.controller("mainController", function($rootScope) {
 
     $rootScope.resetList = function(){
         $rootScope.infoPerPage = $rootScope.rowInfo.length;
+        $rootScope.totalItems = 0;
     };
 
+    $rootScope.calendarOpen = function() {
+        $rootScope.calendar.opened = true;
+    };
+    $rootScope.setDate = function(year, month, day) {
+        $rootScope.dt = new Date(year, month, day);
+    };
 
-});
+    $rootScope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+    $rootScope.format = $rootScope.formats[0];
+    $rootScope.altInputFormats = ['M!/d!/yyyy'];
+
+    $rootScope.calendar = {
+        opened: false
+    };
+
+}]);
